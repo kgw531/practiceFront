@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        p{
-            font-weight: 700;
-        }
         .check{
             text-align: left;
             background-color: black;
@@ -23,6 +20,7 @@
         div{
             text-align: center;
             border: 1px solid black;
+            font-weight: 700;
         }
         span{
             color:blue;
@@ -34,18 +32,55 @@
         #img{
             width: 638px;
             height: 445px;
-            background-image: url('/css/images/top2.jpg');
+            padding: 0px 0px 10px 0px;
+            
            
         }
+        .imgBox{
+            width: 638px;
+            height: 500px;
+            background-image: url(../images/apple-bg.jpg);
+            position: relative;
         
+        }
+        
+        .text{
+            position: absolute;
+            width: 638px;
+            height: 180px;
+            top: 320px;
+            background-color: #00000073;
+            text-align: left;
+            line-height: 2;
+        }
+        .fapple{
+            margin-left: 20px;
+            color: white;
+        }
+        .description{
+            margin-left: 20px;
+            color:rgb(136, 136, 64);
+        }
+
+
+
+
     </style>
 </head>
 
 
 <body>
-   <div id='img'>
-    
-   </div>
+    <div class='imgBox'>
+        <div class='text'>
+            <h1 class = 'fapple'>가정용 꿀사과</h1>
+            <p class=' description'>
+                흠집이 있고 약간은 못생겼지만 맛과 영양은 그대로 입니다.<br>
+                질좋은 사과를 저렴하게 즐겨보세요.
+            
+            </p>
+        </div>
+    </div>
+    <img src='/css/images/top2.jpg'>
     <div class='check'>확인하세요</div>
     <div>
         <h2>주문 및 배송</h2>
