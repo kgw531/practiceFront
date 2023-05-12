@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경이미지</title>
+    <style>
+        body{
+
+         height: 100px;
+         background-image: url(images/bg2.png);
+         background-repeat: no-repeat;
+         /* 오른쪽 상단으로 위치지정 */
+         background-position: right top;
+         /* 배경이미지 고정 
+            기본값: scroll
+         */
+         background-attachment: fixed;
+
+         /* 여러가지 속성을 줄여서 표기
+         속성값이 다르므로 순서는 상관없다. */
+         background: url(images/bg4.jpg) no-repeat bottom center fixed;
+         
+
+
+
+        }
+
+        #content{
+            width: 500px;
+            height: 500px;
+            padding: 30px;
+
+            background-image: url(images/bg1.png);
+            background-repeat: no-repeat;
+            background-repeat: repeat-x;
+            background-repeat: repeat-y;
+
+            height: 100vw;
+            border: 10px dotted #ccc;
+            /* border영역까지 포함하여 배경화면 출력 */
+            background-clip: border-box;
+            /* padding영역까지 포함하여 배경화면 출력 */
+            background-clip: padding-box;
+
+            /* background-clip: content-box; */
+
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+
+            font-size: 10em;
+            font-weight: 900;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        li{
+            /* border: 1px solid black; */
+            /* 배경 이미지 지정*/
+            background-image: url(images/book-icon.png);
+            /* 반복제거 */
+            background-repeat: no-repeat;
+            /* 위치지정 */
+            /*
+                수평: left center right 백분율 길이값
+                수직: top center bottom 백분율 길이값
+            */
+            background-position: left center;
+            /* 줄간격 */ 
+            line-height: 40px;
+            padding-left:50px;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id='content'>
+        텍스트
+    </div>
+
+    <h1>이지스퍼블리싱</h1>
+    <ul>
+        <li>회사소개</li>
+        <li>도서</li>
+        <li>자료실</li>
+        <li>동영상강의</li>
+    </ul>
+</body>
+</html>
