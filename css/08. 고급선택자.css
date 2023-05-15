@@ -1,0 +1,61 @@
+section h1{
+    background-color: black;
+    color: white;
+}
+
+section > p{
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+/* 인접 선택자 */
+#div-test + div{
+    background-color: blueviolet;
+}
+
+#div-test ~ div{
+    font-weight: 700;
+    color : yellow;
+}
+
+#room + p{
+    background-color: #ccc;
+}
+
+/*
+    속성선택자
+    선택자[id]{}
+*/
+
+/* id 속성을 가진 요소를 선택 */
+.div-class[id]{
+    border: 1px solid black;
+}
+
+/* div 중에 name 속성값이 name1과 일치하는 태그*/
+.div-class[id=name1]{
+    background-color: pink;
+}
+
+
+/* div 중에 class 속성에서 class로 시작되는 태그*/
+div[class^="class"]{
+    background-color: #ccc;
+
+}
+
+/* id 속성의 값이 name을 포함하는 */
+.class-div[id*=name]{
+    background-color: red;
+}
+
+/* class 속성의 값이 class로 끝나는*/
+div[class $= class]{
+    padding: 20px;
+}
+
+/* class속성의 값이 20이 포함되어 있는 경우(속성값이 띄어쓰기로 구분) */
+div[class~=20]{
+    padding: 40px;
+    
+}
