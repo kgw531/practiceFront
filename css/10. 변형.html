@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변형</title>
+    <link rel="stylesheet" href="10.변형.css">
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: cornflowerblue;
+            border: 1px solid darkblue;
+            
+            /* 트랜지션 대상 */
+            transition-property: width, height;
+
+            /* 트랜지션 시간*/
+            transition-duration: 2s, 1s;
+        }
+
+        .box:hover{
+            width: 200px;
+            height: 120px;
+        }
+
+        .box1{
+            width: 100px;
+            height: 100px;
+            margin: 30px;
+        }
+       
+
+        .bg-tr{
+            background-color: skyblue;
+            /*
+                transition-timing-function
+                ease: 천천히 시작해서 빨라지다가 천천히 끝
+                linear: 시작부터 끝까지 같은 속도
+                ease-in: 느리게 시작
+                ease-out: 느리게 끝
+                ease-in-out: 느리게 시작하고 느리게 끝남
+            */
+            
+            transition: all ease 1s;
+            transition-timing-function: ease-in;
+        }
+
+        .bg-tr:hover{
+            
+            background-color: orange;
+            border: 3px solid black
+        }
+
+        .border-tr{
+            background-color: skyblue;
+            border: 3px solid pink;
+            transition: all ease-in-out 2s;
+        }
+
+        .border-tr:hover{
+            border-radius: 50%;
+        }
+
+        .rotate{
+            background-color: orange;
+            border: 1px solid #222;
+            transition: 3s ease-in;
+            transition-delay: 3s;   
+        }
+
+        .rotate:hover{
+            width: 200px;
+            height: 200px;
+            background-color: violet;
+            transform: rotate(270deg);
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Transition</h1>
+    웹 요소의 스타일 속성이 조금씩 자연스럽게 바뀌도록 함
+    <div class='box'></div>
+
+    <div class='box1 bg-tr'></div>
+    <div class='box1 border-tr'></div>
+
+    <div class='box1 rotate'></div>
+
+    <h1>변형</h1>
+
+    <h3>좌우로 움직이기</h3>
+    <img src='../css/images/images/prod1.jpg' class='trans-test' id='trans1'>
+
+    <h3>위 아래로 움직이기</h3>
+    <img src='../css/images/images/prod1.jpg' class='trans-test' id='trans2'>
+
+    <h3>대각선으로 움직이기</h3>
+    <img src='../css/images/images/prod1.jpg' class='trans-test' id='trans3'>
+
+    <h3>가로로 확대/축소</h3>
+    <img src='../css/images/images/prod1.jpg' class='trans-test' id='trans4'>
+
+
+    <h3>세로로 확대/축소</h3>
+    <img src='../css/images/images/prod1.jpg' class='trans-test' id='trans5'>
+
+
+    <h3>전체 확대/축소</h3>
+    <img src='../css/images/images/prod1.jpg' class='trans-test' id='trans6'>
+
+    <h3>지정한 각도만큼 회전</h3>
+    <img class='trans-test' id='trans7' src='../css/images/images/prod1.jpg'>
+    <img class='trans-test' id='trans8' src='../css/images/images/prod1.jpg'>
+
+    <h3>중심축</h3>
+    <img class='trans-test' id='trans9' src='../css/images/images/prod1.jpg'>
+    <img class='trans-test' id='trans10' src='../css/images/images/prod1.jpg'>
+
+</body>
+</html>
