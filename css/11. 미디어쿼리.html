@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* 기본 배경 이미지 지정 */
+            background: url(/css/실습7-반응형웹/images/bg0.jpg) no-repeat;
+            background-size: cover;
+        }
+        @media screen and (max-width:1024px){
+            body{
+                /* 가로가 1024px 이하이면 */
+                background: url(/css/실습7-반응형웹/images/bg1.jpg) no-repeat;
+                background-size: cover;
+            }
+        }
+
+        @media screen and (max-width:768px){
+            body{
+                /* 가로가 768px 이하이면 */
+                background: url(/css/실습7-반응형웹/images/bg2.jpg) no-repeat;
+                background-size: cover;
+            }
+        }
+
+        @media screen and (max-width:320px){
+            body{
+                /* 가로가 320px 이하이면 */
+                background: url(/css/실습7-반응형웹/images/bg3.jpg) no-repeat;
+                background-size: cover;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Media Query</h1>
+</body>
+</html>
