@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            text-decoration: none;
+            color: #333;
+            box-sizing: border-box;
+        }
+        nav .menu{
+            /* 부모 영역을 벗어나면 숨김처리 */
+            overflow: hidden;
+            
+        }
+        nav .menu li{
+            width: 150px;
+            background-color: cornflowerblue;
+            position: relative;
+            float: left;
+         
+        }
+
+        nav .menu li a{
+            /* 인라인요소이므로 크기를 지정하기 위해 속성을 변경*/
+            display: inline-block;
+            width: 100%;
+            line-height: 30px;
+            
+            font-size: 1.2em;
+            font-weight: 800;
+            padding: 20px;
+        }
+
+        nav .menu li a:hover{
+            background-color: darkblue;
+            color: white;
+        }
+
+        /* 
+        +: 형제요소 선택 
+        inline 스타일 > id 스타일 > class 스타일 > 태그 스타일
+        */
+        nav .menu li a:hover + .submenu, nav .menu li .submenu:hover{
+            /* display: block; */
+            /* height: 200px; */
+            max-height: 500px;
+        }
+        /* 바로 위의  스타일과 우선순위를 비교하여 선택자를 잘 설정해야 한다.
+            태그 스타일을 더 디테일하게 줄 경우 우선순위가 더 높다
+        */
+        nav .menu .submenu{
+            /* 화면에서 숨김 */
+            /* display: none;   */
+            max-height: 0px;
+            /* display: block 일 경우 transition이 실행되지 않는다.*/
+            transition: 1s;
+            overflow: hidden;
+        }
+
+
+
+        nav .menu li a:hover span{
+            transform: rotate(45deg);
+        }
+
+        nav .menu .submenu li {
+            padding-left: 20px;
+        }
+
+        nav .menu .submenu li a{
+            font-size: 1em;
+            font-weight: 700;
+        }
+
+
+        .menu li a span{
+            position: absolute;
+            right: 10px;
+            color: white;
+            transition: 1s;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class='menu'>
+                <li>
+                    <a href="#">단체여행<span>▼</span></a>
+                    <!-- 서브메뉴 -->
+                    <ul class='submenu'>
+                        <li><a href="#">회사 연수</a></li>
+                        <li><a href="#">수학 여행</a></li>
+                    
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">맞춤여행<span>▼</span></a>
+                    <ul class='submenu'>
+                        <li><a href="#">4.3 평화기행</a></li>
+                        <li><a href="#">곶자왈 체험</a></li>
+                        <li><a href="#">힐링워크샵</a></li>
+                    </ul>
+        
+                </li>
+                <li><a href="#">갤러리</a></li>
+                <li><a href="#">문의하기</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        .wrapper{
+            border: 1px solid black;
+            display: grid;
+            /* 컬럼의 갯수와 크기를 지정 */
+            /* 컬럼의 갯수와 크기지정
+                px는 고정단위 이므로 컨텐츠가 길어질 경우 짤림 현상이 있을 수 있다. */
+            grid-template-columns: 200px 200px 200px;
+            /* repeat(칸의 갯수, 칸의 크기) 그래서 위 코드와 아래 코드는 같다*/
+            /* grid-template-columns: repeat(3,200px); */
+            grid-template-columns: repeat(3,400px); 
+
+            /* fr(fraction 단우ㅣ) : 그리드컨테이너의 여유공간을 비율로 나눠서 설정 */
+            grid-template-columns: repeat(3, 1fr);
+
+            /* 행의 갯수와 크기를 지정 */
+            grid-template-rows: 100px;
+            /* 최대값 최소값 지정 */
+            grid-template-rows: repeat(2,minmax(100px, auto));
+
+            /* 줄간격, 컬럼간격을 조정*/
+            gap: 10px 20px;
+
+            row-gap: 20px;
+            column-gap: 20px;
+        }
+        .item{
+            padding: 10px;
+            background-color: #eee;
+           
+        }
+        .item:nth-child(even){
+            background-color: #bbb;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="item">Id nostrud ad esse excepteur sint culpa do sint sit in non.</div>
+        <div class="item">Id nostrud ad esse excepteur sint culpa do sint sit in non.</div>
+        <div class="item">Id nostrud ad esse excepteur sint culpa do sint sit in non.</div>
+        <div class="item">Id nostrud ad esse excepteur sint culpa do sint sit in non.</div>
+        <div class="item">Id nostrud ad esse excepteur sint culpa do sint sit in non.</div>
+    </div>
+</body>
+</html>
