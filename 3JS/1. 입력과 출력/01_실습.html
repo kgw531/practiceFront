@@ -46,15 +46,25 @@
             let selectColor = document.querySelector('#selectColor');
             var color = selectColor.value;
             var div1 = document.querySelector('#div1');
-            div1.style.backgroundColor = color;
+        
+            console.log(color);
+            var r = parseInt(color.substr(1,2),16);
+            var g = parseInt(color.substr(3,2),16);
+            var b = parseInt(color.substr(5,2),16);
+            var rgb = `rgb(${r},${g},${b})`;
             
+
             // 1.선택된 색상과 박스의 색상이 같다면 메세지 처리
-            // var boxColor = getComputedStyle(div1).backgroundColor
-            // if(boxColor = color ){
-            //     alert('색상이 똑같아요.')
+            var boxColor = getComputedStyle(div1).backgroundColor
+            if(boxColor = rgb ){
+                alert('색상이 똑같아요.')
 
-            // }
+            }else{
+                div1.style.backgroundColor = color;
+            }
 
+            console.log(rgb)
+            console.log(boxColor)
             // 2. 박스의 크기를 변경해보자
             div1.style.width = '200px';
             div1.style.height = '200px';
