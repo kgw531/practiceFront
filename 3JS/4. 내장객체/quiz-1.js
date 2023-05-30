@@ -1,5 +1,8 @@
 window.onload = function(){
     btn.addEventListener('click', function(e){
+        // 버튼이 1개인 경우 submit버튼으로 동작하는 것이 버튼의 기본이벤트
+        // 기본이벤트를 제거하자.
+
         let name = document.querySelector('#username').value;
         let major = document.querySelector('#major').value;
     
