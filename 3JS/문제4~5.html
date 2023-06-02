@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            let btn = document.querySelector('#btn');
+            let container = document.querySelector('#container');
+            btn.addEventListener('click',function(){
+                if(container.style.display == 'block'){
+                    container.style.display = 'none'
+                }else{
+                    container.style.display = 'block';
+                }
+
+                // if(container.style.display == 'none'){
+                //     container.style.display = 'block';
+                // } else{
+                //     container.style.display = 'none';
+                // }
+            })
+
+        }
+    </script>
+    <style>
+        #container{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id='btn'>회원가입하기</button>
+    <div id='container'>
+        <form method='post'>
+            <table border='1'>
+                <tr>
+                    <td>ID</td>
+                    <td><input type="text" name="id" id="" required><input type="button" value="ID중복검사" ></td>
+                </tr>
+                <tr>
+                    <td>비밀번호</td>
+                    <td><input type="password" name="password" id="" required></td>
+                </tr>
+                <tr>
+                    <td>성명</td>
+                    <td><input type="text" name="id" id="" required></td>
+                </tr>
+                <tr>
+                    <td>E-Mail</td>
+                    <td>
+                        <input type="text" name="id" id="" required>@<input type="text" name="id" id="" required>
+                        <select>
+                            <option value='write'>직접입력</option>
+                            <option value='naver'>naver.com</option>
+                            <option value='google'>google.com</option>
+                            <option value='daum'>daum.net</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>번호선택</td>
+                    <td>
+                        <select required>
+                                <option value='' selected>번호선택</option>
+                                <option value='010'>010</option>
+                                <option value='011'>011</option>
+                                <option value='011'>012</option>
+                        </select>
+                        <input type="text" name="front_Num" id="" required>-<input type="text" name="back_num" id="" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>성별</td>
+                    <td>
+                        <input type="radio" name="gender" id="" required>남자
+                        <input type="radio" name="gender" id="" required>여자
+                    </td>
+                </tr>
+                <tr>
+                    <td>취미</td>
+                    <td>
+                        <input type="checkbox" name="hobby" id="">공부
+                        <input type="checkbox" name="hobby" id="">등산
+                        <input type="checkbox" name="hobby" id="">게임
+                        <input type="checkbox" name="hobby" id="">낚시
+                        <input type="checkbox" name="hobby" id="">쇼핑
+                        <input type="checkbox" name="hobby" id="">코딩
+                    </td>
+                </tr>
+                <tr>
+                    <td>자기소개</td>
+                    <td>
+                        <textarea cols='50' rows='10' maxlength="100" required></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan='2'>
+                        <input type="submit" value="회원가입">
+                        <input type="button" value="취소">
+                    </td>
+    
+                </tr>
+            </table>
+    
+    
+        </form>
+    </div>
+
+</body>
+</html>
